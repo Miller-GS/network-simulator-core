@@ -13,3 +13,7 @@ requirements:
 unit-tests:
 	@echo "Running tests"
 	@python -m pytest tests/
+
+lint:
+	@echo "Running linter"
+	@python -m black network_simulator/ tests/
