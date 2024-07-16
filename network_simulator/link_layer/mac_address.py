@@ -9,7 +9,7 @@ class MacAddress:
         if len(mac_address) != 17:
             return False
         for i in range(0, 17):
-            if i % 3 == 2 and mac_address[i] != ':':
+            if i % 3 == 2 and mac_address[i] != ":":
                 return False
             if i % 3 != 2 and (not mac_address[i].isalnum()):
                 return False
@@ -18,7 +18,7 @@ class MacAddress:
     def __str__(self):
         return self.mac_address
 
-    def __eq__(self, other: 'MacAddress'):
+    def __eq__(self, other: "MacAddress"):
         return self.mac_address == other.mac_address
 
     def __hash__(self):
